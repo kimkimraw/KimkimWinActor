@@ -1,15 +1,19 @@
   <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8" />
 	<meta name="keywords" content="WinActor、RPA、自動化、winactor、WINACOR">
 	<meta name="description" content="WinActorアソシエーション資格取得向けのクイズ。">
 	<meta name="author" content="Kimkim">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>KimkimWinActor</title>
-	<link rel="stylesheet" type="text/css" href="index.css"	/>	
-	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"	/>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/makeQuestion.js"></script>
 </head>
+
 
 <!-- =============以下Main画面============= -->
 
@@ -21,7 +25,7 @@
 		<h2>subtitle</h2>
 		<div class="wrapper">
 			<form>
-				<button id="qBtnCategory1">section1</button><br>
+				<button id="qBtnCategory1" value="1" name="qCategory">section1</button><br>
 				<button>section2</button><br>
 				<button>section3</button><br>
 				<button>section4</button><br>
