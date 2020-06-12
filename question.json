@@ -1,0 +1,24 @@
+// 問題文および回答を持つ
+// 問題カテゴリNo
+// 問題文
+// 選択肢1ー4　、　正解フラグ
+
+[
+	{
+		"qNum":1,
+		"qTitile":"次の画面のうち○○なのはどれか1つ選べ",
+		"qSelect1":["xxxx",0],
+		"qselect2":["xxxx",0],
+		"qselect3":["[yyyy",1],
+		"qselect4":["hogehoge",0],
+	},
+	{
+		"qNum":2,
+		"qTitile":"次の画面のうち○○なのはどれか1つ選べ",
+		"qSelect1":["xxxx",0],
+		"qselect2":["xxxx",0],
+		"qselect3":["[yyyy",1],
+		"qselect4":["hogehoge",0],
+	},
+
+];

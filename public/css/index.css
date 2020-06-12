@@ -1,0 +1,18 @@
+*{
+	padding: 0;
+	margin:0;
+}
+
+
+
+header {
+	height: 10vh;
+	width: 100vw;
+	background: blue;
+}
+
+footer {
+	height: 10vh;
+	width: 100vw;
+	background: orange;
+}
