@@ -11,20 +11,37 @@
 //post value json redirect
 console.log("get makeQuestion.js!!");
 
+let fName = "q_select";
+let btnName1 = "qCategory1";
 
-let elem_q_Btncategory = document.getElementById("qBtnCategory1");
 
-console.log(elem_q_Btncategory);
+let elemBtn1 = document.getElementById("qBtnCategory1");
+let url = "../../question.json";
 
-elem_q_Btncategory.AddEventlistener('click'function(){
 
+
+
+elemBtn1.addEventListener('click',function(){
+
+	let NumCategory = getValue(elemBtn1);
+	let result = checkJsonName(elemBtn1,NumCategory);
+	console.log(result);
+
+
+	let data = getQuestion(url,elemBtn1,NumCategory);
+	alert(data);
 });
 
+
+
+// インプットのVAlueを取得
 function getValue (elem){
-	console.log("elemBTNValue :" elem.value);
-	return elem.value
+	let value = console.log("elemBTNValue :" +  elem.value);
+	console.log("ELEM_VALUE : " + elemBtn1.value);
+	return value
 };
 
+// Jsonの数値とインプット数値が一致しているか
 function checkJsonName(elem,value){
 	let qNum = getValue(elem);
 
@@ -37,48 +54,55 @@ function checkJsonName(elem,value){
 	}
 };
 
-function getQuestion(value){
-	let result = checkJsonName();
+// 問題のJSONファイルを取得
+function getQuestion(url,elem,num){
+	let result = checkJsonName(elem,num);
 
 	if(result == true){
+		// 1. $.getJSONメソッドで通信を行う
+	// 	$.getJSON(url)
 
+	// 		// 2. doneは、通信に成功した時に実行される
+	// 		//  引数のdata1は、通信で取得したデータ
+	// 		// .done(function(data1,textStatus,jqXHR) {
+	// 			.done(function(data1){
+	// 			// console.log(jqXHR.status); //例：200
+	// 			// console.log(textStatus); //例：success
 
+	// 			// 3. キーを指定して値を表示
+	// 			consolelog(data1);
+
+	// 			// 4. JavaScriptオブジェクトをJSONに変換
+	// 			const data2 = JSON.stringify(data1);
+	// 			console.log(data2); //コンソールにJSONが表示される
+	// 		})
+	// 		// 5. failは、通信に失敗した時に実行される
+	// 		.fail(function(jqXHR, textStatus, errorThrown ) {
+	// 			console.log("STATUS :" + jqXHR.status); //例：404
+	// 			console.log("TEXT_STATUS" + textStatus); //例：error
+	// 			console.log("ERROR" + errorThrown); //例：NOT FOUND
+	// 		})
+	// 		// 6. alwaysは、成功/失敗に関わらず実行される
+	// 		.always(function() {
+	// 			console.log("完了しました");
+	// 		});
+	// 	return data2
+
+	// }else{
+	// 	alert("get file failed...");
+	// 	return false
+	// }
+	    $.getJSON(url)
+    	.done(function(datas){
+    		console.log(datas);
+    	})
+    	.fail(console.log("sippai"));
 	}
 };
 
 
+function makeQuestion(datas){
 
-
-
-
-
-
-
-
-
-
-
-
-
-function makeQuestion(json){
-			$.getJSON(menu)
-		.done(function(datas,textStatus,jqXHR){
-			console.log(jqXHR.status);
-			console.log(textStatus);
-
-			for(let i = 0; i < datas.length ;i++){
-
-				if (i == 0) {
-					tableElem.innerHTML += "<tr><th>ID</th><th>NAME</th><th>VALUE</th></tr>";
-				};
-
-				tableElem.innerHTML += 	"<tr><th>" + datas[i].MENU_ID
-				 + "</th>"  + "<th>" + datas[i].MENU_NAME
-				  + "</th>" + "<th>¥ " + datas[i].MENU_VALUE  + "</th></tr>";
-			};
-
-		})
-		.fail("none");
 };
 
 function cheResult(){
