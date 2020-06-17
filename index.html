@@ -9,11 +9,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>KimkimWinActor</title>
 	<link rel="stylesheet" type="text/css" href="../css/index.css"	/>	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ -->	<script type="text/javascript" src="../../question.js"></script>
 </head>
-
-
 <!-- =============以下Main画面============= -->
 
 <body>
@@ -23,12 +21,11 @@
 	<main>
 		<h2>subtitle</h2>
 		<div class="wrapper">
-			<form name="q_select" method=GET>
-				<button type="button" id="qBtnCategory1" value="1" name="qCategory1">section1</button><br>
-				<button>section2</button><br>
-				<button>section3</button><br>
-				<button>section4</button><br>
-				<input type="button" value="name" name="1" id="qBtn1" />ok
+			<form name="q_select" method="GET" action="question.html">
+				<button type="submit" value=0 name="qCategory">section1</button><br>
+				<button type="submit" value=1 name="qCategory">section2</button><br>
+				<button type="submit" value=2 name="qCategory">section3</button><br>
+				<button type="submit" value=3 name="qCategory">section4</button><br>
 			</form>
 		</div>
 	</main>
@@ -37,6 +34,5 @@
 		<p>info</p>
 	</footer>
 	<script type="text/javascript" src="../js/index.js"></script>
-	<script type="text/javascript" src="../js/makeQuestion.js"></script>
 </body>
 </html>
