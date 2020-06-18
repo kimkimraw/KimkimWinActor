@@ -18,7 +18,7 @@ let questions = [
 			"q_Titile":"次の画面のうち○○なのはどれか1つ選べ",
 			"q_Select1":["xxxx",0],
 			"q_Select2":["xxxx",0],
-			"q_Select3":["[yyyy",1],
+			"q_Select3":["yyyy",1],
 			"q_Select4":["hogehoge",0],
 			"q_Desctiption":"解説",
 		}],
