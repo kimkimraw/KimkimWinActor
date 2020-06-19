@@ -12,7 +12,7 @@ let questions = [
 			"q_Select2":["転送",1],
 			"q_Select3":["実行",0],
 			"q_Select4":["編集",0],
-			"q_desctiption":"WinActorに存在する機能に「転送」はありません。"
+			"q_Desctiption":"WinActorに存在する機能に「転送」はありません。"
 		},
 		{
 			"q_Titile":"WinActoeが動作しない環境は次のうちどれ？",
