@@ -33,15 +33,15 @@ switch (param){
     break; 
 };
 //create question view
-function createQuestion(arrays){
+function createQuestion(json){
 	let html = [];
 	// html.push('<div>');
 	for (let i=0; i < 2;i++){
-		html.push('<div><h3>' + arrays[0].q_category1[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '"value=' + arrays[0].q_category1[i].q_Select1[1] + '>' + arrays[0].q_category1[i].q_Select1[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + arrays[0].q_category1[i].q_Select2[1] + '>' + arrays[0].q_category1[i].q_Select2[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + arrays[0].q_category1[i].q_Select3[1] + '>' + arrays[0].q_category1[i].q_Select3[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + arrays[0].q_category1[i].q_Select4[1] + '>' + arrays[0].q_category1[i].q_Select4[0]
+		html.push('<div><h3>' + json[0].q_category1[i].q_Titile + '</h3>'
+			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select1[1] + '>' + json[0].q_category1[i].q_Select1[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select2[1] + '>' + json[0].q_category1[i].q_Select2[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select3[1] + '>' + json[0].q_category1[i].q_Select3[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select4[1] + '>' + json[0].q_category1[i].q_Select4[0]
 			+ '</div>'
 		);
 	};

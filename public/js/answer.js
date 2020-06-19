@@ -4,23 +4,36 @@ let queryParam = GetQueryString();
 // obj to array
 let arrQueryParam = Object.keys(queryParam).map(function (key) {return queryParam[key]});
 console.log(queryParam);
-console.log(arrQueryParam);
+let qCategoryNum = queryParam.qCategory;
 // createView
 // let View = createView(queryParam,paramName);
 // console.log(View);
 
+// let a = delete arrQueryParam.qCategory;
+// console.log('a:' + a);
+delete queryParam['qCategory'];
+console.log(queryParam);
+queryParam = GetQueryString();
+console.log(queryParam);
+console.log(questions[0].q_category1[0].q_desctiption);
 
-for(let i=0; i< 2; i++){
-    let b = String(i);
-    console.log(b);
-    b = 'U_Answer' + b
-    let a = queryParam.b;
-    console.log(a);
+let i = getQdesctiption(questions);
+console.log('_i_' + i);
 
+
+// get json Qno
+let NumCategory = queryParam.qCategory;
+
+function getQdesctiption(array){
+    let discriptions = [];
+     discriptions.push(array[0].q_category1[0].q_desctiption);
+     return discriptions
 };
 
 
 
+
+// name value param split
 let params = (new URL(document.location)).searchParams;
 for(let prm of params){
   console.log(
