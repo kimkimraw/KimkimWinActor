@@ -1,6 +1,6 @@
 $(".single-item").slick({
   accessibility: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 1000,
   dots: true,
   fade: true,

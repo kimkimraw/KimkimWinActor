@@ -16,16 +16,17 @@
 
 <body>
 	<header>
-		<h2>header</h2>
+		<h1>KimkimWinActor</h1>
 	</header>
 	<main>
-		<h2>subtitle</h2>
-		<div class="wrapper">
+		<div class="categoryWrapper">
+			<h2 class="subTitle">■下の選択肢から問題を選んでね！</h2>
+
 			<form name="q_select" method="GET" action="./public/html/question.html">
-				<button type="submit" value=0 name="qCategory">section1</button><br>
-				<button type="submit" value=1 name="qCategory">section2</button><br>
-				<button type="submit" value=2 name="qCategory">section3</button><br>
-				<button type="submit" value=3 name="qCategory">section4</button><br>
+				<button type="submit" value=0 name="qCategory" class="ScategoryBtn">WinActor概要</button><br>
+				<button type="submit" value=1 name="qCategory" class="ScategoryBtn">画面・記録機能</button><br>
+				<button type="submit" value=2 name="qCategory" class="ScategoryBtn">シナリオ機能</button><br>
+				<button type="submit" value=3 name="qCategory" class="ScategoryBtn">作成中（押すなよ、絶対だぞ。。。）</button><br>
 			</form>
 		</div>
 	</main>
