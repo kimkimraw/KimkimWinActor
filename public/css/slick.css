@@ -9,6 +9,10 @@
   overflow: scroll;
 /*スライドの中身*/
 }
+.slick-track{
+	overflow: scroll;
+	height: 60vh;
+}
 .slick-slide {
   padding-left: 8px;
   color: #419be0;
