@@ -55,14 +55,17 @@ footer {
 /*==================　question画面　==================*/
 /*回答ボタン*/
 .U_AnswerBtn{
+	display: block;
 	outline : none;
 	background: rgba(255,200,100,.9);
-	height: 14vh;
-	width: 80vw;
-	margin-top: 5px;
+	height: 8vh;
+	width: 60vw;
+	padding-top: 2px;
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
 	font-size:1rem;
-	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+
 }
 /*==================　question画面　==================*/
 
