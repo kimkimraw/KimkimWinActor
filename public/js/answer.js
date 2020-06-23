@@ -66,8 +66,8 @@ function createView(arr,json,qPramNum){
             html.push('<div class="A_cardWrapper"><h2>' + qNum +'問目　不正解' + '</h2>' + Quiz[i] + '</div>'
             );
         }
-        else if(arr[i] == 1){
-            html.push('<div class="A_cardWrapper><h2>' + qNum +'問目　正解' + '</h2>' + Quiz[i] + '</div>');
+        if(arr[i] == 1){
+            html.push('<div class="A_cardWrapper"><h2>' + qNum +'問目　正解' + '</h2>' + Quiz[i] + '</div>');
         }
     };
     return html
