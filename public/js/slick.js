@@ -1,7 +1,11 @@
 $(".single-item").slick({
   accessibility: true,
   autoplay: false,
-  autoplaySpeed: 1000,
-  dots: true,
+  autoplaySpeed: 500,
+  dots: false,
   fade: true,
+  focusOnSelect:true,
+  mobileFirst:true,
+  swipeToSlide:true,
+  // centerMode:true,
 });

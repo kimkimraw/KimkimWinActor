@@ -12,7 +12,7 @@ let contentElem = document.getElementById('content');
 let html = forkCreateQuestion(questions,param);
 // create btn View
 let hiddenParam = document.getElementById('F_question');
-let setBtn = '<button type="submit" name="' + paramKeyName + '" value="' + param + '">回答する</button>';
+let setBtn = '<button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '">回答する</button>';
 hiddenParam.insertAdjacentHTML('beforeend',setBtn);
 // クエリパラメータの処理
 switch (param){
@@ -20,10 +20,10 @@ switch (param){
   	contentElem.insertAdjacentHTML('afterbegin',html.join(''));
     break;
   case '1':
-    alert('未実装');
+    contentElem.insertAdjacentHTML('afterbegin',html.join(''));
     break;
   case '2':
-    alert('未実装');
+    contentElem.insertAdjacentHTML('afterbegin',html.join(''));
     break;
   case '3':
   	alert('未実装');
@@ -44,8 +44,8 @@ function forkCreateQuestion(json,qCateNum){
 			html = createQuiz(json,qCateNum);
 			return html
 		case '2':
-			console.log('queryparam=2');
-			break;
+			html = createQuiz(json,qCateNum);
+			return html
 		default:
 			document.write('予期せぬエラーが発生しました。');
 			break;
@@ -70,13 +70,27 @@ function createQuiz(json,qCateNum){
 	}
 
 	if(qCateNum == 1){
-		for (let i=0; i<json[0].q_category2.length;i++){
+		for (let i=0; i<json[1].q_category2.length;i++){
 		let qNum = i + 1;
-		QuizJson.push('<div><h3>' + qNum +'問目</h3><h3>' + json[0].q_category2[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select1[1] + '>' + json[0].q_category2[i].q_Select1[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select2[1] + '>' + json[0].q_category2[i].q_Select2[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select3[1] + '>' + json[0].q_category2[i].q_Select3[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select4[1] + '>' + json[0].q_category2[i].q_Select4[0]
+		QuizJson.push('<div><h3>' + qNum +'問目</h3><h3>' + json[1].q_category2[i].q_Titile + '</h3>'
+			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select1[1] + '>' + json[1].q_category2[i].q_Select1[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select2[1] + '>' + json[1].q_category2[i].q_Select2[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select3[1] + '>' + json[1].q_category2[i].q_Select3[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select4[1] + '>' + json[1].q_category2[i].q_Select4[0]
+			+ '</div>'
+			);
+		};
+		return QuizJson
+	}
+
+	if(qCateNum == 2){
+		for (let i=0; i<json[2].q_category3.length;i++){
+		let qNum = i + 1;
+		QuizJson.push('<div><h3>' + qNum +'問目</h3><h3>' + json[2].q_category3[i].q_Titile + '</h3>'
+			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select1[2] + '>' + json[2].q_category3[i].q_Select1[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select2[2] + '>' + json[2].q_category3[i].q_Select2[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select3[2] + '>' + json[2].q_category3[i].q_Select3[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select4[2] + '>' + json[2].q_category3[i].q_Select4[0]
 			+ '</div>'
 			);
 		};
@@ -92,10 +106,10 @@ function createQuiz2(json){
 	for (let i=0; i<json[0].q_category2.length;i++){
 		let qNum = i + 1;
 		QuizJson.push('<div><h3>' + qNum +'問目</h3><h3>' + json[0].q_category2[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select1[1] + '>' + json[0].q_category2[i].q_Select1[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select2[1] + '>' + json[0].q_category2[i].q_Select2[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select3[1] + '>' + json[0].q_category2[i].q_Select3[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select4[1] + '>' + json[0].q_category2[i].q_Select4[0]
+			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select1[1] + '" class="U_input">' + json[0].q_category2[i].q_Select1[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select2[1] + '" class="U_input">' + json[0].q_category2[i].q_Select2[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select3[1] + '" class="U_input">' + json[0].q_category2[i].q_Select3[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category2[i].q_Select4[1] + '" class="U_input">' + json[0].q_category2[i].q_Select4[0]
 			+ '</div>'
 		);
 	};
