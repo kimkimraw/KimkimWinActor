@@ -7,6 +7,7 @@
   background: #419be0;
   height: 70vh;
   text-align: left;
+  overflow: scroll;
 /*スライドの中身*/
 }
 .slick-slide {
@@ -14,8 +15,8 @@
   color: #419be0;
   background: white;
   height: 50vh;
-  font-size:0.8rem;
-}
+/*  font-size:0.8rem;
+*/}
 /*選択肢の感覚*/
 form input {
 	margin-top:16px;
