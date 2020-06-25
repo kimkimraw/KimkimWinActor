@@ -87,10 +87,10 @@ function createQuiz(json,qCateNum){
 		for (let i=0; i<json[2].q_category3.length;i++){
 		let qNum = i + 1;
 		QuizJson.push('<div><h3>' + qNum +'問目</h3><h3>' + json[2].q_category3[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select1[2] + '>' + json[2].q_category3[i].q_Select1[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select2[2] + '>' + json[2].q_category3[i].q_Select2[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select3[2] + '>' + json[2].q_category3[i].q_Select3[0]
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select4[2] + '>' + json[2].q_category3[i].q_Select4[0]
+			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select1[1] + '>' + json[2].q_category3[i].q_Select1[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select2[1] + '>' + json[2].q_category3[i].q_Select2[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select3[1] + '>' + json[2].q_category3[i].q_Select3[0]
+			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[2].q_category3[i].q_Select4[1] + '>' + json[2].q_category3[i].q_Select4[0]
 			+ '</div>'
 			);
 		};

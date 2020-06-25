@@ -53,8 +53,9 @@ function createArrQuiz(json,qPramNum){
                 +'</p><p>解説<br>' 
                 + json[2].q_category3[i].q_Desctiption + '</p>');
         };
-        return discriptions = "想定外のエラーが発生しました。。。"
+        return discriptions
     }
+    return discriptions = "想定外のエラーが発生しました。。。"
 };
 // create View
 function createView(arr,json,qPramNum){
