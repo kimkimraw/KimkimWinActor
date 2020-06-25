@@ -12,7 +12,7 @@ let contentElem = document.getElementById('content');
 let html = forkCreateQuestion(questions,param);
 // create btn View
 let hiddenParam = document.getElementById('F_question');
-let setBtn = '<button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '">回答する</button>';
+let setBtn = '<button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '" id="answerBtn">回答する</button>';
 hiddenParam.insertAdjacentHTML('beforeend',setBtn);
 // クエリパラメータの処理
 switch (param){

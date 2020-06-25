@@ -7,45 +7,53 @@
 body{
 	height: 100vh;
 	width: 100vw;
+	background-image: url(../img/mainBG.jpg);
 }
 header{
-	height: 10vh;
-	min-height: 10vh;
+	height: 4vh;
+	max-height: 10vh;
 	width: 100vw;
-	background: blue;
+	background: rgba(255,255,255,.2);
 	text-align: center;
 	justify-content: center;
+	font-size: 0.8rem;
 }
 footer {
 	width: 100vw;
-	min-height: 10vh;
+/*	max-height: 7vh;
+*/	height: auto;
 	background: orange;
+	margin:auto;
 }
+
 /*==================　TOP　==================*/
 .categoryWrapper{
 	width: 100vw;
-	height: 80vh;
-	background: rgba(0,200,110,0.5);
+	height: 87vh;
+	max-height: 90vh;
+	min-height: 85vh;
+	background: rgba(0,0,0,0.7);
 	justify-content: center;
 	text-align: center;
+	padding-top: 30px;
 }
 .subTitle{
-	width: auto;
-	position: relative;
+	width: 80vw;
 	text-align: center;
 	justify-content: center;
+	margin:0 auto;
 	border-bottom: solid 10px orange;
 	border-radius: 8px;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-	background: rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.8);
 }
 .ScategoryBtn {
 	outline : none;
-	background: rgba(255,200,100,.3);
+	background: rgba(255,200,100,.9);
 	height: 14vh;
 	width: 80vw;
 	margin-top: 2.5vh;
-	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
 	font-size:1rem;
 }
 
@@ -65,33 +73,30 @@ footer {
 	font-size:1rem;
 	margin-right: auto;
 	margin-left: auto;
-
 }
 /*==================　question画面　==================*/
-
 .A_content{
-	width: 100vw;
-	height: 80vh;
+	width: auto;
 	overflow: scroll;
-
-
+	height: 90vh;
+	max-height: 100vh;
+	min-height: 90vh;
+	background:rgba(0,0,0,.6);
 }
 .A_cardWrapper{
-	width: 90vw;
+	max-width: 55vw;
 	height: auto;
-	margin-left:5vw;
-	background: rgba(0,0,0,.2);
+	margin:5vw auto;
+	background: rgba(255,255,255,.9);
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
 	margin-top:20px;
 	margin-bottom: 20px;
-	border-radius: 8px
-
+	border-radius: 20px
 }
-
 .A_cardWrapper > h2 ,.A_cardWrapper > p{
 	margin-top:14px;
 	padding:10px;
-
+	font-size: 1.2rem;
 }
 
 
