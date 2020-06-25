@@ -17,7 +17,6 @@
 	overflow: scroll;
 	height: 90vh;
 	max-height: 90vh;
-	min-height: 80vh;
 }
 .slick-slide {
   padding-left: 8px;
