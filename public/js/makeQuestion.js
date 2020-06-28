@@ -12,10 +12,6 @@ let contentElem = document.getElementById('content');
 let html = forkCreateQuestion(questions,param);
 // create btn View
 let hiddenParam = document.getElementById('F_question');
-
-
-let setBtn = '<button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '" id="answerBtn">回答する</button>';
-hiddenParam.insertAdjacentHTML('beforeend',setBtn);
 // クエリパラメータの処理
 switch (param){
   case '0':
@@ -68,6 +64,7 @@ function createQuiz(json,qCateNum){
 				+ '</div>'
 			);
 		};
+		html.push('<div><button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '" id="answerBtn">回答する</button></div>');
 		return html
 	}
 	// q_category=1
@@ -82,6 +79,7 @@ function createQuiz(json,qCateNum){
 			+ '</div>'
 			);
 		};
+		html.push('<div><button type="submit" class="U_AnswerBtn" name="' + paramKeyName + '" value="' + param + '" id="answerBtn">回答する</button></div>');
 		return html
 	}
 // q_category2
@@ -96,6 +94,10 @@ function createQuiz(json,qCateNum){
 			+ '</div>'
 			);
 		};
+		html.push('<div><h3>お疲れ様でした。問題は以上です。</h3><button type="submit" class="U_AnswerBtn" name="'
+		 + paramKeyName + '" value="'
+		 + param + '" id="answerBtn">回答する</button></div>');
+		return html
 	}
 // 例外処理
 	html.push('<div><h3>問題データの取得に失敗しました。</h3></div>');
