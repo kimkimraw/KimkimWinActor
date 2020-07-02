@@ -1,37 +1,45 @@
 // // モーダル、動きなどの処理
 
-// let answerBtnElem = document.getElementById('answerBtn');
-// console.log(document.forms[0].elements[2].value);
-
-// console.log(document.forms[0].elements["U_Answer0"].checked);
-// console.log(document.forms[0].length);
-
-// let formLen = document.forms[0].length;
-
-// for (var i =0;i<formLen; i++) {
-// 	console.log(document.forms[0].elements['U_Answer0'].checked);
-
-// }
+let answerBtnElem = document.getElementById('answerBtn');
+let errorMsgElem = document.getElementById('notAllAnswerMsg');
+let arr = window.document.forms[0];
+let formName = 'Q_form';
 
 
-// answerBtnElem.addEventListener('onsbmit',function(){
-// 	console.log('ebent');
-// const color1 = document.Q_form.U_Answer0;
-// if(color1 == null){
-// 	console.log('none');
-// }
-// console.log(color1);
+console.log(arr.elements);
 
-// console.log('e');
-// });
+function getFormDate(arr){
+	let userAnswer = [];
+
+	for (let i=0; i<arr.elemtns[Radio].length;i++) {
+		userAnswer.push(arr.elements["U_Answer" + i]);
+	};
+	return userAnswer
+};
 
 
-// function checkAllInput(value){
-// 	for(let i = 0;i<value.length;i++){
-// 		let radioBtnStatus = document.forms[0].elements[i].checked;
-// 		if(radioBtnStatus  == false){
-// 			return false
-// 		}
-// 	};
-// 	return true
-// };
+let answerFromElem = document.getElementById('F_question');
+answerFromElem.addEventListener('submit',test);
+
+
+let a =  getFormDate(arr);
+console.log(a);
+
+function test(e){
+	let Answers = getFormDate(arr);
+	console.log(Answers);
+
+	for(let i=0; i<Answers.length;i++){
+		console.log(Answers[i]);
+	}
+	e.preventDefault();
+	alert('S');
+	if( e == null){
+		e.preventDefault();
+		alert('S');
+	}
+};
+
+
+
+

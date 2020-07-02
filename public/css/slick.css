@@ -5,33 +5,43 @@
   width: 80vw;
   color: #333;
   background: #419be0;
-  height: auto;
-  max-height:90vh;
-  min-height: 80vh; 
+  height: 80vh;
+  max-height:80vh;
+  min-height: 70vh; 
   background: rgba(10,10,10,.4);
   margin-bottom: 2vh;
-  /*overflow: scroll;*/
+  overflow: scroll;
 /*スライドの中身*/
 }
 .slick-track{
 	overflow: scroll;
-	height: 90vh;
-	max-height: 90vh;
+	height: 100vh;
+	min-height: 100vh;
 }
 .slick-slide {
   padding-left: 8px;
   color: #419be0;
-  background: white;
+  background: rgba(255,255,255,.9);
   font-size:1rem;
-}
-.slick-list{
-	min-height: 80vh;
-	max-height: 80vh;
-	overflow: auto;
+  text-shadow: 5px 5px 2px rgba(0,200,200,.2);
+
 }
 /*選択肢の感覚*/
-form input {
-	margin-top:8px;
+input {
+	margin-top:10px;
 	margin-bottom: 8px;
 	line-height: 1.5rem;
+}
+@media only screen and (min-width: 1200px) {
+	.slick-slide {
+		font-size: 2rem;
+		height: 100%;
+	}
+	.slick-track{
+		height: 60vh;
+		max-height: 70vh;
+	}
+
+
+
 }

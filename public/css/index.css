@@ -20,12 +20,31 @@ header{
 }
 footer {
 	width: 100vw;
-	height: auto;
+	height: 8vh;
 	background: rgba(0,0,0,0.6);
 	margin:auto;
-
 }
-
+footer>p{
+	color: #fff;
+	float: left;
+}
+.toTopBtn{
+	display: inline-block;
+	height: auto;
+	font-size: 1rem;
+	width: 10vw;
+	color:#fff;
+	text-align: center;
+	float: right;
+	border-bottom: none;
+	opacity: 1;
+}
+.toTopBtn:active{
+	opacity: 0.5;
+}
+.toTopBtn:after{
+	float: none;
+}
 /*==================　TOP　==================*/
 .categoryWrapper{
 	width: 100vw;
@@ -88,7 +107,7 @@ footer {
 	height: 90vh;
 	max-height: 100vh;
 	min-height: 90vh;
-	background:rgba(0,0,0,.6);
+	background:rgba(0,0,0,.3);
 }
 .A_cardWrapper{
 	max-width: 70vw;
