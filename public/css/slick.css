@@ -27,10 +27,6 @@
 
 }
 /*選択肢の感覚*/
-input {
-	/*margin-top:10px;*/
-	/*margin-bottom: 8px;*/
-}
 input[type="radio"]{
 	width: 8vw;
 	height: 8vh;
@@ -39,7 +35,6 @@ input[type="radio"]{
 }
 label{
 	text-align: center;
-	margin-top: 100vh;
 
 }
 @media only screen and (min-width: 1200px) {

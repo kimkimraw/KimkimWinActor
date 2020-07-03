@@ -1,4 +1,4 @@
-let errorMsgElem = document.getElementById('notAllAnswerMsg');
+let errorMsgElem = document.getElementById('error');
 let arr = window.document.forms[0];
 // error msg 
 let errorElem = document.getElementById('notAllAnswerMsg');
@@ -17,6 +17,8 @@ function getFormDate(arr){
 	return userAnswer
 };
 // question all check OUT!!
+
+console.log(errorMsgElem);
 function test(e){
 	// let errorElem = document.getElementById('error');
 	// console.log(errorElem);
@@ -24,10 +26,12 @@ function test(e){
 	// 	errorElem.parentNode.removeChild(errorElem);
 	// }
 	let isCheckArr = getFormDate(arr);
+	console.log(isCheckArr[0].value);
+	console.log("dd");
 	for(let i = 0; i < isCheckArr.length; i++){
 		if(isCheckArr[i].value == ""){
-			errorMsgElem.style.display = 'block';
 			e.preventDefault();
+			errorMsgElem.innerHTML = 'まだ未回答の問題があります。';
 			return
 		}
 	};

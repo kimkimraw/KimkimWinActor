@@ -57,10 +57,10 @@ function createQuiz(json,qCateNum){
 		for (let i=0; i<json[0].q_category1.length;i++){
 			let qNum = i + 1;
 			html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[0].q_category1[i].q_Titile + '</h3>'
-				+ '<input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[0].q_category1[i].q_Select1[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[0].q_category1[i].q_Select2[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[0].q_category1[i].q_Select3[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[0].q_category1[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[0].q_category1[i].q_Select4[0] + '</label>'
+				+ '<input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[0].q_category1[i].q_Select1[0] + '</label>'
+				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[0].q_category1[i].q_Select2[0] + '</label>'
+				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[0].q_category1[i].q_Select3[0] + '</label>'
+				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[0].q_category1[i].q_Select4[0] + '</label>'
 				+ '</div>'
 			);
 		};
@@ -76,10 +76,10 @@ function createQuiz(json,qCateNum){
 		for (let i=0; i<json[1].q_category2.length;i++){
 		let qNum = i + 1;
 		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[1].q_category2[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[1].q_category2[i].q_Select1[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[1].q_category2[i].q_Select2[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[1].q_category2[i].q_Select3[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '"value=' + json[1].q_category2[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[1].q_category2[i].q_Select4[0] + '</label>'
+			+ '<input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[1].q_category2[i].q_Select1[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[1].q_category2[i].q_Select2[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[1].q_category2[i].q_Select3[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[1].q_category2[i].q_Select4[0] + '</label>'
 			+ '</div>'
 			);
 		};
@@ -95,15 +95,15 @@ function createQuiz(json,qCateNum){
 		for (let i=0; i<json[2].q_category3.length;i++){
 		let qNum = i + 1;
 		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[2].q_category3[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[2].q_category3[i].q_Select1[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[2].q_category3[i].q_Select2[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + '" id="' + [i]+2 + '"><label for="' + [i]+3 + '">' + json[2].q_category3[i].q_Select3[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[2].q_category3[i].q_Select4[0] + '</label>'
+			+ '<input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[2].q_category3[i].q_Select1[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[2].q_category3[i].q_Select2[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[2].q_category3[i].q_Select3[0] + '</label>'
+			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[2].q_category3[i].q_Select4[0] + '</label>'
 			+ '</div>'
 			);
 		};
 		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
-		+ '<p style="color:red; text-align:center; display:none;" id="error" class="HiddenError">まだ未回答の問題があります。</p>'
+		+ '<p style="color:red; text-align:center;" id="error" class="HiddenError"></p>'
 		+ '<button type="submit" class="U_AnswerBtn" name="'
 		 + paramKeyName + '" value="'
 		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
