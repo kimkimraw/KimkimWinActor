@@ -26,7 +26,7 @@ function test(e){
 	let isCheckArr = getFormDate(arr);
 	for(let i = 0; i < isCheckArr.length; i++){
 		if(isCheckArr[i].value == ""){
-			errorMsgElem.classList.remove('HiddenError');
+			errorMsgElem.style.display = 'block';
 			e.preventDefault();
 			return
 		}

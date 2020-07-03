@@ -28,9 +28,19 @@
 }
 /*選択肢の感覚*/
 input {
-	margin-top:10px;
-	margin-bottom: 8px;
-	line-height: 1.5rem;
+	/*margin-top:10px;*/
+	/*margin-bottom: 8px;*/
+}
+input[type="radio"]{
+	width: 8vw;
+	height: 8vh;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+label{
+	text-align: center;
+	margin-top: 100vh;
+
 }
 @media only screen and (min-width: 1200px) {
 	.slick-slide {
@@ -41,8 +51,8 @@ input {
 		height: 60vh;
 		max-height: 70vh;
 	}
-}
-input[type="radio"]{
+	input[type="radio"]{
 	width: 4vw;
 	height: 4vh;
+}
 }
