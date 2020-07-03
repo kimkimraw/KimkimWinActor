@@ -43,6 +43,6 @@ input {
 	}
 }
 input[type="radio"]{
-	width: 3vw;
-	height: 3vh;
+	width: 4vw;
+	height: 4vh;
 }
