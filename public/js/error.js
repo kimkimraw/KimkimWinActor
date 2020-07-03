@@ -1,6 +1,7 @@
 let errorMsgElem = document.getElementById('notAllAnswerMsg');
 let arr = window.document.forms[0];
-let errMsg = '<p style="color:red; text-align:center;">まだ未回答の問題があります。</p>';
+// error msg 
+let errorElem = document.getElementById('notAllAnswerMsg');
 // event btn
 let answerFromElem = document.getElementById('F_question');
 // main
@@ -17,12 +18,17 @@ function getFormDate(arr){
 };
 // question all check OUT!!
 function test(e){
+	// let errorElem = document.getElementById('error');
+	// console.log(errorElem);
+	// if(errorElem == undefined){
+	// 	errorElem.parentNode.removeChild(errorElem);
+	// }
 	let isCheckArr = getFormDate(arr);
 	for(let i = 0; i < isCheckArr.length; i++){
 		if(isCheckArr[i].value == ""){
+			errorMsgElem.classList.remove('HiddenError');
 			e.preventDefault();
-			answerBtn.insertAdjacentHTML('beforebegin',errMsg);
-			return false;
+			return
 		}
-	}
+	};
 };

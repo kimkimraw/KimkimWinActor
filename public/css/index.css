@@ -131,6 +131,11 @@ footer>p{
 }
 
 
-
+.HiddenError{
+	display: none;
+}
+.DispError{
+	display: inline;
+}
 
 

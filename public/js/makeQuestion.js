@@ -64,9 +64,11 @@ function createQuiz(json,qCateNum){
 				+ '</div>'
 			);
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p><button type="submit" class="U_AnswerBtn" name="'
+		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
+		+ '<p style="color:red; text-align:center;" id="error">まだ未回答の問題があります。</p>'
+		+ '<button type="submit" class="U_AnswerBtn" name="'
 		 + paramKeyName + '" value="'
-		 + param + '" id="answerBtn">回答する</button></div>');
+		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
 		return html
 	}
 	// q_category=1
@@ -81,7 +83,9 @@ function createQuiz(json,qCateNum){
 			+ '</div>'
 			);
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p><button type="submit" class="U_AnswerBtn" name="'
+		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
+		+ '<p style="color:red; text-align:center;" id="error">まだ未回答の問題があります。</p>'
+		+ '<button type="submit" class="U_AnswerBtn" name="'
 		 + paramKeyName + '" value="'
 		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
 		return html
@@ -98,9 +102,11 @@ function createQuiz(json,qCateNum){
 			+ '</div>'
 			);
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p><button type="submit" class="U_AnswerBtn" name="'
+		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
+		+ '<p style="color:red; text-align:center;" id="error" class="HiddenError">まだ未回答の問題があります。</p>'
+		+ '<button type="submit" class="U_AnswerBtn" name="'
 		 + paramKeyName + '" value="'
-		 + param + '" id="answerBtn">回答する</button></div>');
+		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
 		return html
 	}
 // 例外処理
