@@ -19,16 +19,19 @@
 .slick-prev,
 .slick-next
 {
-    font-size: 0;
+    font-size: 20%;
     line-height: 0;
+
 
     position: absolute;
     top: 50%;
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    max-width: 35px;
+    height: 30%;
+
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -49,6 +52,8 @@
     color: transparent;
     outline: none;
     background: transparent;
+    font-size: 2rem;
+
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -56,6 +61,8 @@
 .slick-next:focus:before
 {
     opacity: 1;
+    font-size: 2rem;
+
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
@@ -79,11 +86,11 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -20px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: -20px;
     left: auto;
 }
 .slick-prev:before
