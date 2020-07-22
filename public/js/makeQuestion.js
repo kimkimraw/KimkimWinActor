@@ -27,9 +27,9 @@ switch (param){
     contentElem.insertAdjacentHTML('afterbegin',html.join(''));
   	break;
    default:
-    contentElem.insertAdjacentHTML('afterbegin',html.join(''))
+    contentElem.insertAdjacentHTML('afterbegin',html.join(''));
     break;
-}
+};
 //get question category
 function forkCreateQuestion(json,qCateNum){
 	let html = [];
@@ -51,62 +51,49 @@ function forkCreateQuestion(json,qCateNum){
 };
 // create Quiz html 
 function createQuiz(json,qCateNum){
+	let ansewerHTML = '<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
+		+ '<p style="color:red; text-align:center;" id="error"></p>'
+		+ '<button type="submit" class="U_AnswerBtn" name="'
+		+ paramKeyName + '" value="'
+		+ param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>';
+
 	let html =[];
 // q_category=0
 	if(qCateNum == 0){
-		for (let i=0; i<json[0].q_category1.length;i++){
+		for (let i=0; i<json[0].q_category.length;i++){
 			let qNum = i + 1;
-			html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[0].q_category1[i].q_Titile + '</h3>'
-				+ '<input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[0].q_category1[i].q_Select1[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[0].q_category1[i].q_Select2[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[0].q_category1[i].q_Select3[0] + '</label>'
-				+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[0].q_category1[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[0].q_category1[i].q_Select4[0] + '</label>'
-				+ '</div>'
-			);
+			html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[0].q_category[i].q_Titile + '</h3>');
+			// ここでランダム選択肢
+			html.push(getRandomSelect(json,qCateNum,qNum));
+			html.push('</div>');
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
-		+ '<p style="color:red; text-align:center;" id="error"></p>'
-		+ '<button type="submit" class="U_AnswerBtn" name="'
-		 + paramKeyName + '" value="'
-		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
+		html.push(ansewerHTML);
 		return html
 	}
+
 	// q_category=1
 	if(qCateNum == 1){
-		for (let i=0; i<json[1].q_category2.length;i++){
+		for (let i=0; i<json[1].q_category.length;i++){
 		let qNum = i + 1;
-		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[1].q_category2[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[1].q_category2[i].q_Select1[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[1].q_category2[i].q_Select2[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[1].q_category2[i].q_Select3[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[1].q_category2[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[1].q_category2[i].q_Select4[0] + '</label>'
-			+ '</div>'
-			);
+		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[1].q_category[i].q_Titile + '</h3>');
+			// ここでランダム選択肢
+			html.push(getRandomSelect(json,qCateNum,qNum));
+			html.push('</div>');
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
-		+ '<p style="color:red; text-align:center;" id="error"></p>'
-		+ '<button type="submit" class="U_AnswerBtn" name="'
-		 + paramKeyName + '" value="'
-		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
+		html.push(ansewerHTML);
 		return html
 	}
+
 // q_category2
 	if(qCateNum == 2){
-		for (let i=0; i<json[2].q_category3.length;i++){
+		for (let i=0; i<json[2].q_category.length;i++){
 		let qNum = i + 1;
-		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[2].q_category3[i].q_Titile + '</h3>'
-			+ '<input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select1[1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[2].q_category3[i].q_Select1[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select2[1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[2].q_category3[i].q_Select2[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select3[1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[2].q_category3[i].q_Select3[0] + '</label>'
-			+ '<br><input type="radio" name="U_Answer' + i + '" value="' + json[2].q_category3[i].q_Select4[1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[2].q_category3[i].q_Select4[0] + '</label>'
-			+ '</div>'
-			);
+		html.push('<div><h3>' + qNum +'問目</h3><h3>' + json[2].q_category[i].q_Titile + '</h3>');
+			// ここでランダム選択肢
+			html.push(getRandomSelect(json,qCateNum,qNum));
+			html.push('</div>');
 		};
-		html.push('<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
-		+ '<p style="color:red; text-align:center;" id="error" class="HiddenError"></p>'
-		+ '<button type="submit" class="U_AnswerBtn" name="'
-		 + paramKeyName + '" value="'
-		 + param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>');
+		html.push(ansewerHTML);
 		return html
 	}
 // 例外処理
@@ -132,4 +119,67 @@ function GetQueryString(){
     }
     return result
 };
+
+// 選択肢をランダムで返す
+function getRandomSelect(json,qCateNum,qNumber){
+	let i = qNumber - 1 ;
+
+	if(qCateNum == 0){
+		// 選択肢を配列へ
+		let selector = [
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[0].q_category[i].q_Select[0][1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[0].q_category[i].q_Select[0][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[0].q_category[i].q_Select[1][1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[0].q_category[i].q_Select[1][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[0].q_category[i].q_Select[2][1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[0].q_category[i].q_Select[2][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[0].q_category[i].q_Select[3][1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[0].q_category[i].q_Select[3][0]  + '</label><br>'
+		];
+		// ランダムに入れ替える
+		let selectors = choose_at_random(selector,4);
+		return selectors.join('')
+	}
+
+
+	if(qCateNum == 1){
+		// 選択肢を配列へ
+		let selector = [
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[1].q_category[i].q_Select[0][1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[1].q_category[i].q_Select[0][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[1].q_category[i].q_Select[1][1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[1].q_category[i].q_Select[1][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[1].q_category[i].q_Select[2][1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[1].q_category[i].q_Select[2][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[1].q_category[i].q_Select[3][1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[1].q_category[i].q_Select[3][0]  + '</label><br>'
+		];
+		// ランダムに入れ替える
+		let selectors = choose_at_random(selector,4);
+		return selectors.join('')
+	}
+
+
+	if(qCateNum == 2){
+		// 選択肢を配列へ
+		let selector = [
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[2].q_category[i].q_Select[0][1] + '" id="' + [i]+0 + '"><label for="' + [i]+0 + '">' + json[2].q_category[i].q_Select[0][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[2].q_category[i].q_Select[1][1] + '" id="' + [i]+1 + '"><label for="' + [i]+1 + '">' + json[2].q_category[i].q_Select[1][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[2].q_category[i].q_Select[2][1] + '" id="' + [i]+2 + '"><label for="' + [i]+2 + '">' + json[2].q_category[i].q_Select[2][0]  + '</label><br>',
+				'<br><input type="radio" name="U_Answer' + qNumber + '" value="' + json[2].q_category[i].q_Select[3][1] + '" id="' + [i]+3 + '"><label for="' + [i]+3 + '">' + json[2].q_category[i].q_Select[3][0]  + '</label><br>'
+		];
+		// ランダムに入れ替える
+		let selectors = choose_at_random(selector,4);
+		return selectors.join('')
+	}
+
+	return false
+};
+
+// 配列をランダムに入れ替える
+function choose_at_random(arrayData, count) {
+    // countが設定されていない場合は1にする
+    count = count || 1;
+    arrayData = arrayData;
+    let result = [];
+    for (let i = 0; i < count; i++) {
+        let arrayIndex = Math.floor(Math.random() * arrayData.length);
+        result[i] = arrayData[arrayIndex];
+        // 1回選択された値は削除して再度選ばれないようにする
+        arrayData.splice(arrayIndex, 1);
+    }
+    return result;
+}
 
