@@ -30,28 +30,28 @@ switch(NumCategory){
 function createArrQuiz(json,qPramNum){
     let discriptions = [];
     if(qPramNum == 0){
-        for(let i = 0;i<json[0].q_category1.length; i++){
-            discriptions.push('<p>問題文<br>'+ json[0].q_category1[i].q_Titile 
+        for(let i = 0;i<json[0].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[0].q_category[i].q_Titile 
                 +'</p><br><p>解説<br>' 
-                + json[0].q_category1[i].q_Desctiption + '</p>');
+                + json[0].q_category[i].q_Desctiption + '</p>');
         };
         return discriptions
     }
 
     if(qPramNum == 1){
-        for(let i = 0;i<json[1].q_category2.length; i++){
-            discriptions.push('<p>問題文<br>'+ json[1].q_category2[i].q_Titile 
+        for(let i = 0;i<json[1].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[1].q_category[i].q_Titile 
                 +'</p><br><p>解説<br>' 
-                + json[1].q_category2[i].q_Desctiption + '</p>');
+                + json[1].q_category[i].q_Desctiption + '</p>');
         };
         return discriptions
     }
 
     if(qPramNum == 2){
-        for(let i = 0;i<json[2].q_category3.length; i++){
-            discriptions.push('<p>問題文<br>'+ json[2].q_category3[i].q_Titile 
+        for(let i = 0;i<json[2].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[2].q_category[i].q_Titile 
                 +'</p><p>解説<br>' 
-                + json[2].q_category3[i].q_Desctiption + '</p>');
+                + json[2].q_category[i].q_Desctiption + '</p>');
         };
         return discriptions
     }
