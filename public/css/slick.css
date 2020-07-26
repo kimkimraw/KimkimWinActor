@@ -24,7 +24,7 @@
   color: #419be0;
   background: rgba(255,255,255,.9);
   font-size:1rem;
-  text-shadow: 5px 5px 2px rgba(0,200,200,.2);
+  text-shadow: 5px 5px 7px rgba(0,200,200,.1);
 }
 /*選択肢の感覚*/
 input[type="radio"]{
@@ -38,6 +38,11 @@ label{
 	text-align: left;
 	margin-left: 4px;
 	vertical-align:middle;
+	font-weight: bold;
+  	background: linear-gradient( to top,  #419be0 20%, #000 80% );
+  	-webkit-background-clip: text;
+  	color: transparent;
+
 
 }
 @media only screen and (min-width: 896px) {
@@ -52,6 +57,8 @@ label{
 	input[type="radio"]{
 	width: 3vw;
 	height: 3vh;
-
+	background: linear-gradient( to top,  #419be0 20%, #000 80% );
+  	-webkit-background-clip: text;
+  	color: transparent;
 	}
 }
