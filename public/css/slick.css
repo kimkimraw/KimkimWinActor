@@ -38,12 +38,6 @@ label{
 	text-align: left;
 	margin-left: 4px;
 	vertical-align:middle;
-	font-weight: bold;
-  	background: linear-gradient( to top,  #419be0 20%, #000 80% );
-  	-webkit-background-clip: text;
-  	color: transparent;
-
-
 }
 @media only screen and (min-width: 896px) {
 	.slick-slide {
@@ -56,9 +50,6 @@ label{
 	}
 	input[type="radio"]{
 	width: 3vw;
-	height: 3vh;
-	background: linear-gradient( to top,  #419be0 20%, #000 80% );
-  	-webkit-background-clip: text;
-  	color: transparent;
+	height: 3vh;	
 	}
 }
