@@ -34,9 +34,9 @@ input[type="radio"]{
 	margin-right: 10px;
 }
 label{
-	display: inline-block;
+	display: inline;
 	text-align: left;
-	margin-left: 10%
+	margin-left: 4px;
 	vertical-align:middle;
 
 }
