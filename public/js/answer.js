@@ -22,6 +22,9 @@ switch(NumCategory){
     case '2':
         contentElem.insertAdjacentHTML('afterbegin',html.join(''));
         break;
+    case '3':
+        contentElem.insertAdjacentHTML('afterbegin',html.join(''));
+        break;
     default:
         contentElem.insertAdjacentHTML('afterbegin','<div class="A_cardWrapper "><h2>想定外のエラーが発生しました。</h2></div>');
         break;
@@ -55,11 +58,31 @@ function createArrQuiz(json,qPramNum){
         };
         return discriptions
     }
+
+    if(qPramNum == 3){
+        for(let i = 0;i<json[0].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[0].q_category[i].q_Titile 
+                +'</p><br><p>解説<br>' 
+                + json[0].q_category[i].q_Desctiption + '</p>');
+        };
+        for(let i = 0;i<json[1].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[1].q_category[i].q_Titile 
+                +'</p><br><p>解説<br>' 
+                + json[1].q_category[i].q_Desctiption + '</p>');
+        };
+        for(let i = 0;i<json[2].q_category.length; i++){
+            discriptions.push('<p>問題文<br>'+ json[2].q_category[i].q_Titile 
+                +'</p><p>解説<br>' 
+                + json[2].q_category[i].q_Desctiption + '</p>');
+        };
+        return discriptions
+    }
+
     return discriptions = "想定外のエラーが発生しました。。。"
 };
 
 
-// create View
+// create View ture or false
 function createView(arr,json,qPramNum){
     let Quiz = createArrQuiz(json,qPramNum);
     let html = [];
