@@ -2,23 +2,17 @@
 .container {
   margin: 0 auto;
   padding: 28px;
-  max-width: 75vw;
+  max-width: 95%;
+  width: 80%;
   color: #333;
   background: #419be0;
   height: 80vh;
-  max-height:80vh;
-  min-height: 80vh; 
+  max-height:75vh;
+  min-height: 65vh; 
   background: rgba(10,10,10,.4);
   margin-bottom: 2vh;
-  overflow: scroll;
-  
-/*スライドの中身*/
 }
-.slick-track{
-	overflow: scroll;
-	height: 100vh;
-	min-height: 100vh;
-}
+
 .slick-slide {
   padding-left: 8px;
   color: #419be0;

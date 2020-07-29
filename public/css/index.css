@@ -8,23 +8,22 @@ body{
 	height: 100vh;
 	width: 100vw;
 	background-image: url(../img/robo_main.jpg);
-	/*word-wrap: break-word;*/
-	
+	overflow-y: hidden;
 }
 header{
-	height: auto;
-	max-height: 10vh;
-	width: 100vw;
+	height: 5vh;
+	max-height: 5vh;
+	width: 100%;
 	background: rgba(255,255,255,.2);
 	text-align: center;
-	justify-content: center;
-	font-size: 0.8rem;
+	margin-top: 0;
+
 }
 footer {
 	width: 100vw;
-	height: 8vh;
+	height: 10vh;
 	background: rgba(0,0,0,0.6);
-	margin:auto;
+	margin:0 auto;
 }
 footer>p{
 	color: #fff;
@@ -49,14 +48,16 @@ footer>p{
 }
 /*==================　TOP　==================*/
 .categoryWrapper{
-	width: 100vw;
+	width: 95vw;
 	height: 80vh;
 	max-height: 90vh;
-	min-height: 85vh;
+	min-height: 80vh;
 	background: rgba(0,0,0,0.7);
 	justify-content: center;
 	text-align: center;
 	padding-top: 30px;
+	margin: 0 auto;
+	margin-bottom: 2vh;
 }
 .subTitle{
 	width: 80vw;
@@ -77,10 +78,6 @@ footer>p{
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
 	font-size:1rem;
 }
-
-/*box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;*/
-
-
 /*==================　question画面　==================*/
 /*回答ボタン*/
 .U_AnswerBtn{
@@ -109,12 +106,14 @@ footer>p{
 }
 /*==================　question画面　==================*/
 .A_content{
-	width: auto;
+	width: 95vw;
 	overflow: scroll;
-	height: 90vh;
-	max-height: 100%;
-	min-height: 90%;
+	height: 85vh;
+	max-height: 90vh;
+	min-height: 80vh;
 	background:rgba(0,0,0,.3);
+	margin: 0 auto;
+	margin-bottom: 2vh;
 }
 .A_cardWrapper{
 	max-width: 90%;
