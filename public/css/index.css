@@ -23,8 +23,6 @@ header,h1{
 	margin-top: 0;
 }
 footer {
-	position: fixed;
-	bottom:0;
 	width: 100vw;
 	height: 10vh;
 	background: rgba(0,0,0,0.6);
