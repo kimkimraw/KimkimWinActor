@@ -23,7 +23,7 @@ header,h1{
 	margin-top: 0;
 }
 footer {
-	display: fixed;
+	position: fixed;
 	bottom:0;
 	width: 100vw;
 	height: 10vh;
