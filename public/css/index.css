@@ -23,6 +23,11 @@ header,h1{
 	margin-top: 0;
 }
 footer {
+<<<<<<< HEAD
+=======
+	display: fixed;
+	bottom:0;
+>>>>>>> parent of 2a399ad... miss display -> positon
 	width: 100vw;
 	height: 10vh;
 	background: rgba(0,0,0,0.6);
