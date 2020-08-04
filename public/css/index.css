@@ -17,45 +17,44 @@ body{
 }
 header,h1{
 	height: 6vh;
-	width: 100%;
+	width: 100vw;
 	background: rgba(255,255,255,.2);
 	text-align: center;
 	margin-top: 0;
 }
 footer {
 	width: 100vw;
-	height: 10vh;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	justify-content: space-between;
 	background: rgba(0,0,0,0.6);
-	margin:0 auto;
-	z-index: 9999;
 }
 footer>p{
+	/*flex-grow:2;*/
+	/*flex-shrink:5;*/
 	color: #fff;
-	float: left;
+	flex-basis: 50%;
 }
 .toTopBtn{
+	width: 20vw;
+	display: flex;
+	height: auto;
 	text-decoration: none;
-	display: inline-block;
-	height: 100%;
-	font-size: 1rem;
-	width: 10%;
+	font-size: 1.5rem;
 	color:#fff;
-	text-align: center;
-	float: right;
-	border-bottom: none;
-	opacity:.9;
-	background-color: rgba(0,0,0,.8);
+	opacity:.8;
 }
 .toTopBtn:active{
+	color: grey;
 	opacity: 0.5;
 }
 .toTopBtn:hover{
+	color: grey;
 	opacity: 0.5;
 }
-/*.toTopBtn::after{
-	content:'';
-	float: none;
-}*/
 /*==================　TOP　==================*/
 .categoryWrapper{
 	display: block;
@@ -81,14 +80,13 @@ footer>p{
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 	background: rgba(255,255,255,0.8);
 }
-/*単語ページリング*/
-
+/*bottun 単語ページリング*/
 .ScategoryBtn{
 	outline : none;
 	background: rgba(255,200,100,.9);
 	height: 14vh;
 	width: 80vw;
-	margin-top: 2.5vh;
+	margin: 2.5vh auto;
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
 	font-size:1rem;
 }
