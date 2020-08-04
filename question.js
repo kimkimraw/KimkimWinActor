@@ -15,7 +15,7 @@ let questions = [
 					["実行",0],
 					["編集",0],
 				],
-				"q_Desctiption":"WinActorに存在する機能は「記録」「実行」「編集」の3つです。"
+				"q_Desctiption":"WinActorの機能は「記録」「実行」「編集」の3つです。"
 			},
 			{
 				"q_Titile":"WinActorが動作しない環境は次のうちどれ？",

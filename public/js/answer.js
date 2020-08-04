@@ -1,3 +1,7 @@
+// 不正アクセスでクエリパラメータがない場合の処理が未完(qcateはあるけど、回答パラムがない)
+
+
+
 // get queryPram
 let queryParam = GetQueryString();
 // obj to array

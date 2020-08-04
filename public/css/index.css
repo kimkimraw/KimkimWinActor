@@ -10,14 +10,17 @@ body{
 	background-image: url(../img/robo_main.jpg);
 	overflow-y: hidden;
 }
+.header_ancar{
+	text-decoration: none;
+	color:#000;
+
+}
 header,h1{
-	height: 5vh;
-	max-height: 5vh;
+	height: 6vh;
 	width: 100%;
 	background: rgba(255,255,255,.2);
 	text-align: center;
 	margin-top: 0;
-
 }
 footer {
 	width: 100vw;
@@ -30,37 +33,45 @@ footer>p{
 	float: left;
 }
 .toTopBtn{
+	text-decoration: none;
 	display: inline-block;
-	height: 8vh;
+	height: 100%;
 	font-size: 1rem;
-	width: 10vw;
+	width: 10%;
 	color:#fff;
 	text-align: center;
 	float: right;
 	border-bottom: none;
-	opacity: 1;
+	opacity:.9;
+	background-color: rgba(0,0,0,.8);
 }
 .toTopBtn:active{
 	opacity: 0.5;
 }
-.toTopBtn:after{
-	float: none;
+.toTopBtn:hover{
+	opacity: 0.5;
 }
+/*.toTopBtn::after{
+	content:'';
+	float: none;
+}*/
 /*==================　TOP　==================*/
 .categoryWrapper{
+	display: block;
 	width: 95vw;
-	height: 80vh;
+	height: 75vh;
 	max-height: 90vh;
-	min-height: 80vh;
+	min-height: 78vh;
 	background: rgba(0,0,0,0.7);
 	justify-content: center;
 	text-align: center;
 	padding-top: 30px;
 	margin: 0 auto;
 	margin-bottom: 2vh;
+	overflow: scroll;
 }
 .subTitle{
-	width: 80vw;
+	width: 80%;
 	text-align: center;
 	justify-content: center;
 	margin:0 auto;
@@ -69,7 +80,9 @@ footer>p{
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 	background: rgba(255,255,255,0.8);
 }
-.ScategoryBtn {
+/*単語ページリング*/
+
+.ScategoryBtn{
 	outline : none;
 	background: rgba(255,200,100,.9);
 	height: 14vh;
@@ -77,6 +90,20 @@ footer>p{
 	margin-top: 2.5vh;
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
 	font-size:1rem;
+}
+.link_word_page{
+	display: flex;
+	text-decoration: none;
+	font-size:1rem;
+	color: #000;
+	height: 14vh;
+	width: 80vw;
+	margin: 2.5vh auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255,200,100,.9);
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
 }
 /*==================　question画面　==================*/
 /*回答ボタン*/
@@ -115,7 +142,7 @@ footer>p{
 	margin: 0 auto;
 	margin-bottom: 2vh;
 }
-.A_cardWrapper{
+.A_cardWrapper,.W_cardWrapper{
 	max-width: 90%;
 	height: auto;
 	margin:5vw auto;
@@ -128,4 +155,36 @@ footer>p{
 	padding:10px;
 	font-size: 1.2rem;
 }
+/*==================単語帳==================*/
+.wordWrapper{
+	max-width: 100vw;
+	height: 85vh;
+	overflow: scroll;
+	margin-bottom: 2vh;
+}
 
+.words{
+	display: inline-block;
+	margin-left: 1.5vw;
+	line-height: 1.5em;
+	background-color: rgba(0,0,0,0.02);
+	border-radius: 10%;
+	height: auto;
+	overflow: auto;
+	padding: 20px;
+	margin-top: 8px;
+}
+.words::before{
+	content:'';
+	border-left: 10px double blue;
+	height: auto;
+}
+
+.word_discription{
+	padding: 20px;
+	max-width: 100%;
+	height: auto;
+	overflow:auto; 
+	word-break: break-all;
+	
+}
