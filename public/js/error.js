@@ -20,17 +20,8 @@ function getFormDate(arr){
 	return userAnswer
 };
 // question all check OUT!!
-let a = getFormDate(arr);
-console.log(a);
-console.log(a.length);
-console.log(a[0][0].checked);
-
-
-
-
 function test(e){
 	let IsAllAnswer = getFormDate(arr);
-	console.log(IsAllAnswer[0].value);
 
 	for(let i = 0; i < IsAllAnswer.length; i++){
 		// 選択肢の「Value」がなければTRUE
@@ -47,18 +38,8 @@ function test(e){
 					errorMsgElem.innerHTML = 'まだ未回答の問題があります。';
 					return
 				}
-			};
+			}
 		return false
-	};
-
-
-
-
-		
-		// if(isCheckArr[i].value == ""){
-		// 	e.preventDefault();
-		// 	errorMsgElem.innerHTML = 'まだ未回答の問題があります。';
-		// 	return
-		// }
+		};
 	};
 };

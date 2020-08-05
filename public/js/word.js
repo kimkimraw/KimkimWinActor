@@ -14,7 +14,7 @@ function createView (arr) {
 	for(let i = 0; i<arr.length; i++){
 		views.push('<div class="W_cardWrapper"><h2 class="words">'
 			+	arr[i].word
-			+	'</h2><div class="word_discription"><p>'
+			+	'</h2><div class="word_discription"><p class="word_comment">'
 			+	arr[i].discription
 			+	'</p></div></div>');
 	};
