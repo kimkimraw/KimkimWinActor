@@ -8,9 +8,8 @@
   background: #419be0;
   height: auto;
   max-height:100%;
-  /*min-height: 65vh; */
   background: rgba(10,10,10,.4);
-  margin-bottom: 2vh;
+  margin: 20px auto;
 }
 
 .slick-slide {

@@ -6,7 +6,7 @@
 }
 body{
 	position: relative;
-	height: 100vh;
+	height:100vh;
 	width: 100vw;
 	background-image: url(../img/robo_main.jpg);
 	overflow-y: hidden;
@@ -63,11 +63,9 @@ footer>p{
 	height: auto;
 	max-height: 68vh;
 	background: rgba(0,0,0,0.7);
-	justify-content: center;
 	text-align: center;
-	padding-top: 30px;
-	margin: 0 auto;
-	margin-bottom: 2vh;
+	padding: 30px 0;
+	margin: 30px auto;
 	overflow: scroll;
 }
 .subTitle{
@@ -136,10 +134,9 @@ footer>p{
 	overflow: scroll;
 	height: 100%;
 	max-height: 80vh;
-	/*min-height: 70vh;*/
+
 	background:rgba(0,0,0,.3);
-	margin: 0 auto;
-	margin-bottom: 10vh;
+	margin: 20px auto;
 }
 .A_cardWrapper,.W_cardWrapper{
 	max-width: 90%;
