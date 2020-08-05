@@ -82,8 +82,8 @@
     display: none;
     float: left;
 
-    min-height: 75vh;
-    max-height: 75vh;
+    min-height: 65vh;
+    max-height: 65vh;
     overflow: scroll;
 }
 [dir='rtl'] .slick-slide
