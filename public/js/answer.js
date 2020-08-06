@@ -74,10 +74,13 @@ function createArrQuiz(json,qPramNum){
         discriptions = getAnswer(json,0,len);
         // category1 の問題取得
         len = json[1].q_category.length;
-        discriptions.push(getAnswer(json,1,len));
+        // カテゴリ0と1の一次元配列を連結
+        discriptions = discriptions.concat(getAnswer(json,1,len));
         // cateeory2 の問題取得
         len = json[2].q_category.length;
-        discriptions.push(getAnswer(json,2,len));
+        // 配列連結
+        discriptions = discriptions.concat(getAnswer(json,2,len));
+
         return discriptions
 
     }    
