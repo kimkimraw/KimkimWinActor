@@ -92,11 +92,11 @@ function createView(arr,json,qPramNum){
     for(let i = 0;i<arr.length; i++){
         let qNum = i + 1;
         if(arr[i] == 0){
-            html.push('<div class="A_cardWrapper"><h2>あなたの回答' + qNum +'つ目：　<span style="color:blue;">不正解</span>' + '</h2>' + Quiz[i] + '</div>'
+            html.push('<div class="A_cardWrapper"><h2>第' + qNum +'問目：　<span style="color:blue;">不正解</span>' + '</h2>' + Quiz[i] + '</div>'
             );
         }
         if(arr[i] == 1){
-            html.push('<div class="A_cardWrapper"><h2>あなたの回答' + qNum +'つ目：　<span style="color:red">正解</span>' + '</h2>' + Quiz[i] + '</div>');
+            html.push('<div class="A_cardWrapper"><h2>第' + qNum +'問目：　<span style="color:red">正解</span>' + '</h2>' + Quiz[i] + '</div>');
         }
     };
     return html
