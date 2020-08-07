@@ -18,13 +18,14 @@ contentElem.insertAdjacentHTML('afterbegin',html);
 
 //Main Function 
 function createQuiz(json,qCateNum){
+	let html =[];
 	let ansewerHTML = '<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
 		+ '<p style="color:red; text-align:center;" id="error"></p>'
 		+ '<button type="submit" class="U_AnswerBtn" name="'
 		+ paramKeyName + '" value="'
 		+ param + '" id="answerBtn">回答する</button><p id="notAllAnswerMsg"></p></div>';
 
-	let html =[];
+	
 // q_category=0
 	if(qCateNum == 0){
 		// 問題数を取得
