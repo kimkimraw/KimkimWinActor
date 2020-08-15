@@ -137,7 +137,7 @@ footer>p{
 	width: 95vw;
 	overflow: scroll;
 	/*height: 100%;*/
-	max-height: 80vh;
+	max-height: 70vh;
 
 	background:rgba(0,0,0,.3);
 	margin: 20px auto;
@@ -155,6 +155,17 @@ footer>p{
 	padding:10px;
 	font-size: 1.2rem;
 }
+.correctNum{
+	padding: 2vh;
+	width: 70%;
+	vertical-align: middle;
+	text-align: center;
+	margin:2vh auto;
+	background: rgba(255,255,255,.9);
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	border-radius: 20px
+}
+
 /*==================単語帳==================*/
 .wordWrapper{
 	max-width: 100vw;

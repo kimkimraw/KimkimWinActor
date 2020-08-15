@@ -13,6 +13,8 @@ let NumCategory = queryParam.qCategory;
 let html = createView(arrQueryParam,questions,NumCategory);
 // view erea
 let contentElem = document.getElementById('content');
+// 正解数を表示するエリア
+let correctNumElem = document.getElementById('correctNum');
 
 
 // 再度挑戦する？的なやつ
@@ -20,6 +22,10 @@ let reBtnElem = document.getElementById('re_Btn');
 let ViewBtn = '<form name="q_select" method="GET" action="./question.html">'
     + '<p><button type="submit" value="'+ NumCategory + '"name="qCategory" class="link_word_page">もう一度やる</button></p>'
     + '<p><a href="../../index.html" class="link_word_page">TOPへ戻る</a></p></form>';
+
+let correctView =  createCorrectView(html);
+correctNumElem.innerHTML = correctView;
+
 
 // view fork
 switch(NumCategory){
@@ -94,10 +100,11 @@ function createView(arr,json,qPramNum){
     let html = [];
     for(let i = 0;i<arr.length; i++){
         let qNum = i + 1;
+        // 不正解の場合True
         if(arr[i] == 0){
-            html.push('<div class="A_cardWrapper"><h2>第' + qNum +'問目：　<span style="color:blue;">不正解</span>' + '</h2>' + Quiz[i] + '</div>'
-            );
+            html.push('<div class="A_cardWrapper"><h2>第' + qNum +'問目：　<span style="color:blue;">不正解</span>' + '</h2>' + Quiz[i] + '</div>');
         }
+        // 正解の場合True
         if(arr[i] == 1){
             html.push('<div class="A_cardWrapper"><h2>第' + qNum +'問目：　<span style="color:red">正解</span>' + '</h2>' + Quiz[i] + '</div>');
         }
@@ -115,3 +122,28 @@ function getAnswer(json,palm,len){
     }
     return result
 };
+
+// 問題数と正解数を取得
+function getCorrectNum(arr){
+    // 検索文字を定義
+    let str = '不正解';
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+        let isCorrect = arr[i].match(str);
+        if(isCorrect != null){
+            count++
+        }
+    };
+    // 問題数から不正解数を引き、正解数を出す
+    let CorrectNum = arr.length - count;
+    return CorrectNum
+};
+
+
+function createCorrectView(arr){
+    let correctNum = getCorrectNum(arr);
+    let crrectHTML = arr.length + '問中' + correctNum + '問正解';
+    return crrectHTML
+}
+
+
