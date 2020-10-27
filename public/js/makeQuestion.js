@@ -27,8 +27,6 @@ function createQuiz(json,qCateNum){
 
 	
 // q_category=0
-
-
 	if(qCateNum == 0){
 		// 問題数を取得
 		let len = json[qCateNum].q_category.length;
@@ -98,16 +96,10 @@ function createQuiz(json,qCateNum){
 function getRandomSelect(json,qCateNum,qNumber,i){
 	// 選択肢を配列へ
 	let selector = [
-			// '<br><input type="radio" data-QS="' + qNumber  + "_" + json[qCateNum].q_category[i].q_Select[0][2] + '"' + 'name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[0][1] + '" id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label><br>',
-// [&quot;◯&quot;,&quot;□&quot;]
-			'<br><input type="radio" name="UA' + qNumber + '" value="' + '[' + json[qCateNum].q_category[i].q_Select[0][1] + ',' + json[qCateNum].q_category[i].q_Select[0][2] + ']"' + '"' + 'id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label><br>',
-
-			// '<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[0][1] + ',' + json[qCateNum].q_category[i].q_Select[0][2] + '"' + 'id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label><br>',
-
-
-			'<br><input type="radio" data-QS="' + qNumber  + "_" + json[qCateNum].q_category[i].q_Select[1][2] + '"' + 'name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[1][1] + '" id="' + qNumber + 1 + '"><label for="' + qNumber + 1 + '">' + json[qCateNum].q_category[i].q_Select[1][0]  + '</label><br>',
-			'<br><input type="radio" data-QS="' + qNumber  + "_" + json[qCateNum].q_category[i].q_Select[2][2] + '"' + 'name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[2][1] + '" id="' + qNumber + 2 + '"><label for="' + qNumber + 2 + '">' + json[qCateNum].q_category[i].q_Select[2][0]  + '</label><br>',
-			'<br><input type="radio" data-QS="' + qNumber  + "_" + json[qCateNum].q_category[i].q_Select[3][2] + '"' + 'name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[3][1] + '" id="' + qNumber + 3 + '"><label for="' + qNumber + 3 + '">' + json[qCateNum].q_category[i].q_Select[3][0]  + '</label><br>'
+			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[0][1] + '" id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label><br>',
+			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[1][1] + '" id="' + qNumber + 1 + '"><label for="' + qNumber + 1 + '">' + json[qCateNum].q_category[i].q_Select[1][0]  + '</label><br>',
+			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[2][1] + '" id="' + qNumber + 2 + '"><label for="' + qNumber + 2 + '">' + json[qCateNum].q_category[i].q_Select[2][0]  + '</label><br>',
+			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[3][1] + '" id="' + qNumber + 3 + '"><label for="' + qNumber + 3 + '">' + json[qCateNum].q_category[i].q_Select[3][0]  + '</label><br>'
 	];
 	// ランダムに入れ替える
 	let selectors = choose_at_random(selector,4);
