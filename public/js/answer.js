@@ -9,9 +9,9 @@ let qCategoryNum = queryParam.qCategory;
 // users_answer num
 arrQueryParam.pop();
 // get json Qno
-let NumCategory = queryParam.qCategory;
 let html = createView(arrQueryParam,questions,NumCategory);
-// view erea
+// view erealet NumCategory = queryParam.qCategory;
+
 let contentElem = document.getElementById('content');
 // 正解数を表示するエリア
 let correctNumElem = document.getElementById('correctNum');

@@ -6,7 +6,7 @@ let errorElem = document.getElementById('notAllAnswerMsg');
 let answerFromElem = document.getElementById('F_question');
 
 // main
-answerFromElem.addEventListener('submit',test);
+answerFromElem.addEventListener('submit',checkAnswer);
 
 //get question input data  
 function getFormDate(arr){
@@ -20,8 +20,9 @@ function getFormDate(arr){
 	return userAnswer
 };
 // question all check OUT!!
-function test(e){
+function checkAnswer(e){
 	let IsAllAnswer = getFormDate(arr);
+	console.log(IsAllAnswer);
 
 	for(let i = 0; i < IsAllAnswer.length; i++){
 		// 選択肢の「Value」がなければTRUE
