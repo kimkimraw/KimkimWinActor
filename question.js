@@ -35,7 +35,7 @@ let questions = [
 					["画面表示が1024× 768であるもの",0,3],
 					["HDDが空き容量3.0GB 以上",0,4],
 				],
-				"q_Desctiption":"WinActorはCPU「3.6Hz以上」ではなく「2.5 GHz以上」で動作します。"
+				"q_Desctiption":"WinActorはCPU「3.6GHz以上」ではなく「2.5 GHz以上」で動作します。"
 			},
 			{
 				"q_Titile":"WinActorの説明として誤っているものを選びなさい。",
@@ -323,7 +323,7 @@ let questions = [
 				"q_Desctiption":"データ一覧へのインポートについてはxlsm形式には対応していません。対応しているファイル形式は「csv」「xlsx」「xls」になります。"
 			},
 			{
-				"q_Titile":"WinActorの自動記録機能について誤っているものを選択しなさい。",
+				"q_Titile":"WinActorの自動記録機能について正しいものを選択しなさい。",
 				"q_Select":[
 					["「イベントモード」「エミュレーションモード」「IEモード」「座標指定型」",0],
 					["「イベントモード」「エミュレーションモード」「UI識別型」「Chromeモード」",0],
