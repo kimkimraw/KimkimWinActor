@@ -5,28 +5,22 @@
 	font-family:"Lucida Grande", Helvetica, Arial, sans-serif;
 }
 body{
-	position: relative;
-	height:100vh;
-	width: 100vw;
+	width: 100%;
 	background-image: url(../img/robo_main.jpg);
-	overflow-y: hidden;
 }
 .header_ancar{
 	text-decoration: none;
 	color:#000;
-
 }
 header,h1{
 	height: 6vh;
-	width: 100vw;
+	width: 100%;
 	background: rgba(255,255,255,.2);
 	text-align: center;
-	margin-top: 0;
+	margin: 0;
 }
 footer {
-	width: 100vw;
-	position: absolute;
-	bottom: 0;
+	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: flex-end;
@@ -60,66 +54,75 @@ footer>p{
 .categoryWrapper{
 	display: block;
 	width: 95vw;
-	height: auto;
-	max-height: 68vh;
-	background: rgba(0,0,0,0.7);
+	/* background: rgba(255,255,255,0.7); */
 	text-align: center;
-	padding: 30px 0;
-	margin: 30px auto;
-	overflow: scroll;
+	margin:0 auto;
 }
 .subTitle{
-	width: 80%;
-	text-align: center;
-	justify-content: center;
-	margin:0 auto;
-	border-bottom: solid 10px orange;
-	border-radius: 8px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-	background: rgba(255,255,255,0.8);
-}
-/*bottun 単語ページリング*/
-.ScategoryBtn{
-	outline : none;
-	background: rgba(255,200,100,.9);
-	height: 14vh;
-	width: 80vw;
-	margin: 2.5vh auto;
-	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
-	font-size:1rem;
-}
-.link_word_page{
-	display: flex;
-	text-decoration: none;
-	font-size:1rem;
+	padding: 16px 25px 16px 25px;
+	border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
+	border-bottom: 4px solid #419be0;
+	border-right: 4px solid #419be0;
+	background: #fff;
 	color: #000;
-	height: 14vh;
+}
+
+
+.ScategoryBtn{
+	display: block;
+	outline : none;
+	background:linear-gradient(-135deg, #419be0, #41e083);
+	height: 10vh;
 	width: 80vw;
-	margin: 2.5vh auto;
+	margin: .8em auto;
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	font-size:2rem;
+	border-radius: 20px;
+	border:none;
+	color: #fff;
+}
+
+.link_word_page{
+	outline : none;
+	background:linear-gradient(-135deg, #419be0, #41e083);
+	height: 10vh;
+	width: 60vw;
+	margin: 1em auto;
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	border-radius: 20px;
+	border:none;
+	overflow: hidden;
+}
+
+.link_word_btn{
+	display: block;
 	text-align: center;
-	justify-content: center;
-	align-items: center;
-	background-color: rgba(255,200,100,.9);
-	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.8);
+	text-decoration: none;
+	height: 10vh;
+	width: 60vw;
+	margin: .5em auto;
+	color: #fff;
+	font-size:2rem;
 }
 /*==================　question画面　==================*/
 /*回答ボタン*/
-.U_AnswerBtn{
+.U_AnswerBtn,.challenge_again_btn{
 	display: block;
 	outline : none;
-	background: rgba(255,200,100,.9);
+	background:linear-gradient(-135deg, #419be0, #41e083);
 	height: 10vh;
 	width: 60vw;
-/*	margin-top: 5px;
-*/	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	margin: 1em auto;
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
 	font-size:2rem;
-	margin-right: auto;
-	margin-left: auto;
+	border-radius: 20px;
+	border:none;
+	color: #fff;
 }
 .U_answerMsg{
-	height: 30vh;
+	height: auto;
+	margin:1em auto;
 	text-align: center;
-	margin-top: 20vh;
 	font-size: 1rem;
 	font-weight: bold;
 }
@@ -129,26 +132,17 @@ footer>p{
 	}
 }
 /*==================　result画面　==================*/
-.resultWrapper{
-	height: 65vh;
 
-}
 .A_content{
 	width: 95vw;
-	overflow: scroll;
-	/*height: 100%;*/
-	max-height: 70vh;
-
-	background:rgba(0,0,0,.3);
-	margin: 20px auto;
+	margin: 1em auto;
 }
 .A_cardWrapper,.W_cardWrapper{
-	max-width: 90%;
 	height: auto;
 	margin:5vw auto;
 	background: rgba(255,255,255,.9);
 	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
-	border-radius: 20px
+	border-radius: 20px;
 }
 .A_cardWrapper > h2 ,.A_cardWrapper > p{
 	margin-top:14px;
@@ -187,15 +181,8 @@ footer>p{
 	overflow: auto;
 	padding: 20px;
 	margin-top: 8px;
-	width: 80%;stop-color: 
+	width: 80%;
 }
-
-/*見出し左がわにアイコン表示*/
-/*.words::before{
-	content:url(../../favicons/icon-48x48.png);
-	width: 100%;
-	text-align: center;
-}*/
 
 .word_discription{
 	padding: 20px;
@@ -204,3 +191,4 @@ footer>p{
 	overflow:auto; 
 	word-break: break-all;
 }
+

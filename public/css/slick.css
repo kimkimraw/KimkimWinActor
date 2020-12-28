@@ -1,37 +1,63 @@
 /*全体*/
 .container {
   margin: 0 auto;
-  padding: 28px;
-  max-width: 95vw;
-  width: 80%;
-  color: #333;
-  background: #419be0;
+  width: 96vw;
   height: auto;
-  max-height:100%;
-  background: rgba(10,10,10,.4);
-  margin: 20px auto;
+  color: #333;
+  overflow:hidden;
 }
 
 .slick-slide {
-  padding-left: 8px;
-  color: #419be0;
-  background: rgba(255,255,255,.9);
-  font-size:1rem;
-  text-shadow: 5px 5px 7px rgba(0,200,200,.1);
+	/* max-width: 95vw; */
+	padding: 28px;
+	padding-left: 8px;
+	color: #419be0;
+	background: rgba(255,255,255,.9);
+	font-size:1rem;
+	text-shadow: 5px 5px 7px rgba(0,200,200,.1);
 }
+
+/* 一問ごとのコンテンツラッパー */
+ /*問題数表示  */
+h3{
+	margin: 1em;
+}
+	 
+
+.q_wrapper{
+	height: auto;
+	background: rgba(255,255,255,.8);
+	border: solid 2px rgba(0,0,0,.6);
+	margin: 10px auto;
+	border-radius: 10px;
+}
+
 /*選択肢の感覚*/
+.selecter{
+	text-align: center;
+	margin: .8em 0;
+}
+
 input[type="radio"]{
+	display: none;
 	width: 6vw;
 	height: 6vh;
 	vertical-align: middle;
-	margin-right: 10px;
+
 }
 label{
-	display: inline;
-	text-align: left;
-	margin-left: 4px;
+	color:#000;
+	display: inline-block;
 	vertical-align:middle;
+	text-align: left;
+	width: 84%;
+	height: auto;
+	padding: 1em .4em;
+	border:2px solid rgba(0, 0, 0, .2);;
+	border-radius:6px;
 }
+
+
 @media only screen and (min-width: 896px) {
 	.slick-slide {
 		font-size: 2rem;
@@ -46,3 +72,10 @@ label{
 	height: 3vh;	
 	}
 }
+
+/* 選択肢　ラッパークラス */
+input[type="radio"]:checked + label{
+	border:2px solid #419be0;
+	color: #419be0;
+}
+

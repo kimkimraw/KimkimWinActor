@@ -19,7 +19,7 @@ contentElem.insertAdjacentHTML('afterbegin',html);
 //Main Function 
 function createQuiz(json,qCateNum){
 	let html =[];
-	let ansewerHTML = '<div><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
+	let EndAnswerHTML = '<div class="q_wrapper"><p class="U_answerMsg">お疲れ様でした。<br>問題は以上です。<br>回答ボタンを押して解答結果をみましょう。</p>'
 		+ '<p style="color:red; text-align:center;" id="error"></p>'
 		+ '<button type="submit" class="U_AnswerBtn" name="'
 		+ paramKeyName + '" value="'
@@ -33,7 +33,7 @@ function createQuiz(json,qCateNum){
 		// 問題を取得、HTML文へ整形
 		html.push(addQuiz(json,qCateNum,len,0));
 		// 回答ボタンページを最後に追加
-		html.push(ansewerHTML);
+		html.push(EndAnswerHTML);
 		return html.join('')
 	}
 
@@ -44,7 +44,7 @@ function createQuiz(json,qCateNum){
 		// 問題を取得、HTML文へ整形
 		html.push(addQuiz(json,qCateNum,len,0));
 		// 回答ボタンページを最後に追加
-		html.push(ansewerHTML);
+		html.push(EndAnswerHTML);
 		return html.join('')
 	}
 
@@ -55,7 +55,7 @@ function createQuiz(json,qCateNum){
 		// 問題を取得、HTML文へ整形
 		html.push(addQuiz(json,qCateNum,len,0));
 		// 回答ボタンページを最後に追加
-		html.push(ansewerHTML);
+		html.push(EndAnswerHTML);
 		return html.join('')
 	}
 
@@ -83,7 +83,7 @@ function createQuiz(json,qCateNum){
 		html.push(addQuiz(json,2,len,num));
 
 	// 回答ボタンページを最後に追加
-		html.push(ansewerHTML);
+		html.push(EndAnswerHTML);
 		return html.join('')		
 	}
 
@@ -96,10 +96,10 @@ function createQuiz(json,qCateNum){
 function getRandomSelect(json,qCateNum,qNumber,i){
 	// 選択肢を配列へ
 	let selector = [
-			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[0][1] + '" id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label><br>',
-			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[1][1] + '" id="' + qNumber + 1 + '"><label for="' + qNumber + 1 + '">' + json[qCateNum].q_category[i].q_Select[1][0]  + '</label><br>',
-			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[2][1] + '" id="' + qNumber + 2 + '"><label for="' + qNumber + 2 + '">' + json[qCateNum].q_category[i].q_Select[2][0]  + '</label><br>',
-			'<br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[3][1] + '" id="' + qNumber + 3 + '"><label for="' + qNumber + 3 + '">' + json[qCateNum].q_category[i].q_Select[3][0]  + '</label><br>'
+			'<div class="selecter"><br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[0][1] + '" id="' + qNumber + 0 + '"><label for="' + qNumber + 0 + '">' + json[qCateNum].q_category[i].q_Select[0][0]  + '</label></div>',
+			'<div class="selecter"><br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[1][1] + '" id="' + qNumber + 1 + '"><label for="' + qNumber + 1 + '">' + json[qCateNum].q_category[i].q_Select[1][0]  + '</label></div>',
+			'<div class="selecter"><br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[2][1] + '" id="' + qNumber + 2 + '"><label for="' + qNumber + 2 + '">' + json[qCateNum].q_category[i].q_Select[2][0]  + '</label></div>',
+			'<div class="selecter"><br><input type="radio" name="UA' + qNumber + '" value="' + json[qCateNum].q_category[i].q_Select[3][1] + '" id="' + qNumber + 3 + '"><label for="' + qNumber + 3 + '">' + json[qCateNum].q_category[i].q_Select[3][0]  + '</label></div>'
 	];
 	// ランダムに入れ替える
 	let selectors = choose_at_random(selector,4);
@@ -124,7 +124,7 @@ function addQuiz(json,palam,len,qNum){
 	let result = [];
 	for(let i=0; i < len; i++){
 		qNum = qNum + 1;
-			result.push('<div><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
+			result.push('<div class="q_wrapper"><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
 			// ここでランダム選択肢
 			result.push(getRandomSelect(json,palam,qNum,i));
 			result.push('</div>');
