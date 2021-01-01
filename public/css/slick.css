@@ -25,7 +25,7 @@ h3{
 	 
 
 .q_wrapper{
-	height: auto;
+	/* height: auto; */
 	background: rgba(255,255,255,.8);
 	border: solid 2px rgba(0,0,0,.6);
 	margin: 10px auto;
@@ -79,3 +79,111 @@ input[type="radio"]:checked + label{
 	color: #419be0;
 }
 
+
+.SingleAnswerBtn{
+	display: block;
+	outline : none;
+	background:linear-gradient(-135deg, #419be0, #41e083);
+	height: 10vh;
+	width: 80vw;
+	margin: .8em auto;
+	box-shadow: 8px 10px 8px 2px rgba(0,0,0,.4);
+	font-size:2rem;
+	border-radius: 20px;
+	border:none;
+	color: #fff;
+}
+.SingleAnswerBtn:disabled{
+	opacity: .4;
+}
+
+.SingleAnswerBtn:active{
+	transition: all .2s;
+	transform: scale(.95);
+}
+
+.discriptionErea{
+	display: block;
+	width: 90%;
+	text-align: left;
+	border: 2px solid #419be0;
+	border-radius: 10px;
+	color: #419be0;
+	margin: .8em auto;
+	padding: 28px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.currectMsg{
+	display: none;
+	width: 90%;
+	text-align: center;
+	border-radius: 10px;
+	margin: .8em auto;
+	padding: 28px;
+	font-size: 1.4em;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+/* 解説表示 */
+.discriptionErea{
+	display: none;
+	width: 80%;
+	text-align: center;
+	border-radius: 10px;
+	margin: .8em auto;
+	padding: 28px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.hidden{
+	display: none;
+}
+
+.resultMsg{
+	display: block;
+	width: 80%;
+	text-align: left;
+	background-color: #419be0;
+	border-radius: 10px;
+	color: #fff;
+	margin: .8em auto;
+	padding: 28px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+
+.discriptionViewBtn{
+	display: block;
+	height: auto;
+	width: 80%;
+	text-align: left;
+	margin: 1em auto;
+	padding: 10px;
+	/* border: 2px solid rgba(0, 0, 0, .6); */
+	border-radius: 10px;
+}
+
+.trgBtn{
+	width: auto;
+	height: auto;
+	display: inline-block;
+	color: #fff;
+	background-color: #419be0;
+	/* border:2px solid #419be0; */
+	padding: .2em;
+	border-radius: 50%;
+	transform:rotate(90deg);
+	transition: all .1s;
+	cursor:pointer;
+	margin-left: .4em;
+}
+
+.trgBtnActive{
+	transform:rotate(270deg);
+	transition: all .1s;
+}

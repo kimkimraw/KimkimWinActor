@@ -39,7 +39,14 @@
 			<h2 class="subTitle">■クイズの前に！</h2>
 			<div class="link_word_page"><a class="link_word_btn" href="./public/html/words.html">基礎単語</a></div>
 			<h2 class="subTitle">■問題を選んでね！</h2>
+
 			<form name="q_select" method="GET" action="./public/html/question.html">
+				<div class="AnswerDispFlgWrapper">
+					<input type="radio" id="formatTest" name="formatFlg" value="0" checked>
+					<label for="formatTest">テスト形式</label>
+					<input type="radio" id="formatSingle" name="formatFlg" value="1">
+					<label for="formatSingle">一問一答形式</label>	
+				</div>			
 				<button type="submit" value=0 name="qCategory" class="ScategoryBtn">WinActor概要</button>
 				<button type="submit" value=1 name="qCategory" class="ScategoryBtn">画面・記録機能</button>
 				<button type="submit" value=2 name="qCategory" class="ScategoryBtn">シナリオ機能</button>
