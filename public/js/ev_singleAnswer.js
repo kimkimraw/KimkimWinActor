@@ -27,9 +27,10 @@ const discriptionViewBtnElem = document.getElementsByClassName('discriptionViewB
 [...discriptionViewBtnElem].forEach(btn => {
     // ボタン押下時点発火
     btn.addEventListener('click', (event) => {
-        let tes = document.getElementsByClassName('discriptionViewBtn');
-        let test = Array.from(tes);
-        let index = test.findIndex(list => list === event.currentTarget);
+        let discriptionViewBtnClassName = document.getElementsByClassName('discriptionViewBtn');
+        let ArrdiscriptionViewBtnClassName = Array.from(discriptionViewBtnClassName);
+        let index = ArrdiscriptionViewBtnClassName.findIndex(list => list === event.currentTarget);
+        index = index + 1;
         let Elem = document.getElementById('discriptionView' + index);
         
         console.log(index);

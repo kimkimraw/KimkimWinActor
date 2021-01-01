@@ -130,6 +130,9 @@ input[type="radio"]:checked + label{
 	padding: 20px;
 }
 
+input[type="radio"]:checked + .hidden{
+	display: none;
+}
 
 
 

@@ -159,10 +159,10 @@ function addQuiz(json,palam,len,qNum){
 	let result = [];
 	for(let i=0; i < len; i++){
 		qNum = qNum + 1;
-			result.push('<div class="q_wrapper"><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
+			result.push('<section class="q_wrapper"><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
 			// ここでランダム選択肢
 			result.push(getRandomSelect(json,palam,qNum,i));
-			result.push('</div>');
+			result.push('</section>');
 	}
 	return result.join('');
 };
@@ -171,7 +171,7 @@ function addSingleQuiz(json,palam,len,qNum){
 	let result = [];
 	for(let i=0; i < len; i++){
 		qNum = qNum + 1;
-			result.push('<div class="q_wrapper"><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
+			result.push('<section class="q_wrapper"><h3>' + qNum +'問目</h3><h3>' + json[palam].q_category[i].q_Titile + '</h3>');
 			// ここでランダム選択肢
 			result.push(getRandomSelect(json,palam,qNum,i));
 			// 一問一答形式の回答ボタン
@@ -184,13 +184,13 @@ function addSingleQuiz(json,palam,len,qNum){
 				+ '<p id="UA' + qNum + '" class="currectMsg"></p>' 
 				+ '<div id="UA' + qNum + 'DiscriptionWrapper" class=""hidden>'
 				+ CurrectView
-				+ '<div class="discriptionViewBtn" id="discriptionBtn' + i + '">解説をみる<span class="trgBtn">＞</span></div>'
-				+ '<div class="discriptionErea" id="discriptionView' + i + '"' + '>'
+				+ '<div class="discriptionViewBtn" id="discriptionBtn' + qNum + '">解説をみる<span class="trgBtn">＞</span></div>'
+				+ '<div class="discriptionErea" id="discriptionView' + qNum + '"' + '>'
 				+ '<p class="discriptionMsg">' + json[palam].q_category[i].q_Desctiption + '</p></div></div>';
 
 			
 			result.push(AnswerView);
-			result.push('</div></div></div>'); 
+			result.push('</div></div></section>'); 
 	}
 	
 	return result.join('');

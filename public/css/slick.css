@@ -5,7 +5,12 @@
   height: auto;
   color: #333;
   overflow:hidden;
+  
 }
+
+
+
+
 
 .slick-slide {
 	/* max-width: 95vw; */
@@ -24,12 +29,16 @@ h3{
 }
 	 
 
+.single-item{
+	scroll-snap-type: y mandatory;
+}
 .q_wrapper{
 	/* height: auto; */
 	background: rgba(255,255,255,.8);
 	border: solid 2px rgba(0,0,0,.6);
 	margin: 10px auto;
 	border-radius: 10px;
+	scroll-snap-align:center;
 }
 
 /*選択肢の感覚*/
