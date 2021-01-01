@@ -22,8 +22,6 @@ function getFormDate(arr){
 // question all check OUT!!
 function checkAnswer(e){
 	let IsAllAnswer = getFormDate(arr);
-	console.log(IsAllAnswer);
-
 	for(let i = 0; i < IsAllAnswer.length; i++){
 		// 選択肢の「Value」がなければTRUE
 		if(IsAllAnswer[i].value == ''){
