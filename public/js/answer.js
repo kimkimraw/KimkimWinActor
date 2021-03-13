@@ -21,7 +21,7 @@ let correctNumElem = document.getElementById('correctNum');
 // 再度挑戦する？的なやつ
 let reBtnElem = document.getElementById('re_Btn');
 let ViewBtn = '<form name="q_select" method="GET" action="./question.html">'
-    + '<p><button type="submit" value="'+ NumCategory + '"name="qCategory" class="challenge_again_btn">もう一度やる</button></p>'
+    + '<p><input type="hidden" name="formatFlg" value="0"><button type="submit" value="'+ NumCategory + '"name="qCategory" class="challenge_again_btn">もう一度やる</button></p>'
     + '<div class="link_word_page"><a href="../../index.html" class="link_word_btn">TOPへ戻る</a></p></form>';
 
 let correctView =  createCorrectView(html);

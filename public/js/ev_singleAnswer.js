@@ -4,6 +4,8 @@ let formDate = getFormDate(arr);　//ノードリストを配列へ入れる
 const singleBtnClassName = document.getElementsByClassName('SingleAnswerBtn');
 //タグ名から取得
 [...singleBtnClassName].forEach(btn => {
+    console.log("btn : " + btn);
+    console.log(btn);
     // ボタン押下時点発火
     btn.addEventListener('mousedown', (event) => {
         // n番目のボタン要素を判定
